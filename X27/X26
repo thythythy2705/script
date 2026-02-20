@@ -1,6 +1,6 @@
 -- ============================================================
--- x27 DUELS - RED EDITION + FAST ESP
--- discord.gg/x27
+-- X27 DUELS -   RED EDITION + FAST ESP
+-- discord.gg/x27hub
 -- ============================================================
 
 repeat task.wait() until game:IsLoaded()
@@ -593,10 +593,10 @@ local function createCoordMarker(position, labelText, color)
 end
 
 -- Create markers at exact coordinates
-createCoordMarker(Vector3.new(-476.48, -6.28, 92.73), "L1", Color3.fromRGB(100, 150, 255))
-createCoordMarker(Vector3.new(-483.12, -4.95, 94.80), "L END", Color3.fromRGB(60, 130, 255))
-createCoordMarker(Vector3.new(-476.16, -6.52, 25.62), "R1", Color3.fromRGB(100, 220, 180))
-createCoordMarker(Vector3.new(-483.04, -5.09, 23.14), "R END", Color3.fromRGB(50, 200, 150))
+createCoordMarker(Vector3.new(-476.48, -6.28, 92.73), "L1", Color3.fromRGB(255, 0, 0))
+createCoordMarker(Vector3.new(-476.48, -6.28, 92.73), "L END", Color3.fromRGB(255, 0, 0))
+createCoordMarker(Vector3.new(-476.48, -6.28, 92.73), "R1", Color3.fromRGB(255, 0, 0))
+createCoordMarker(Vector3.new(-476.48, -6.28, 92.73), "R END", Color3.fromRGB(255, 0, 0))
 
 -- Auto Walk
 local autoWalkConnection = nil
@@ -827,7 +827,7 @@ local progressConnection = nil
 local StealData = {}
 
 -- Discord text for progress bar
-local DISCORD_TEXT = "22s cracked.lol"
+local DISCORD_TEXT = "x27 HUB"
 
 local function getDiscordProgress(percent)
     local totalChars = #DISCORD_TEXT
@@ -1113,22 +1113,27 @@ end
 local isMobile = UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled
 local guiScale = isMobile and 0.4 or 1
 
-local C = {
-    bg = Color3.fromRGB(2, 2, 4),
-    purple = Color3.fromRGB(60, 130, 255),
-    purpleLight = Color3.fromRGB(100, 170, 255),
-    purpleDark = Color3.fromRGB(30, 80, 200),
-    purpleGlow = Color3.fromRGB(80, 150, 255),
-    accent = Color3.fromRGB(60, 130, 255),
+local C = { 
+    bg = Color3.fromRGB(4, 2, 2),
+
+    red = Color3.fromRGB(255, 60, 60),
+    redLight = Color3.fromRGB(255, 100, 100),
+    redDark = Color3.fromRGB(200, 30, 30),
+    redGlow = Color3.fromRGB(255, 80, 80),
+
+    accent = Color3.fromRGB(255, 60, 60),
+
     text = Color3.fromRGB(255, 255, 255),
-    textDim = Color3.fromRGB(100, 170, 255),
+    textDim = Color3.fromRGB(255, 120, 120),
+
     success = Color3.fromRGB(34, 197, 94),
     danger = Color3.fromRGB(239, 68, 68),
-    border = Color3.fromRGB(30, 60, 120)
+
+    border = Color3.fromRGB(120, 30, 30)
 }
 
 local sg = Instance.new("ScreenGui")
-sg.Name = "22S_BLUE"
+sg.Name = "X27_RED"
 sg.ResetOnSpawn = false
 sg.Parent = Player.PlayerGui
 
@@ -1318,7 +1323,7 @@ local titleLabel = Instance.new("TextLabel", header)
 titleLabel.Size = UDim2.new(1, 0, 0, 32 * guiScale)
 titleLabel.Position = UDim2.new(0, 0, 0, 10 * guiScale)
 titleLabel.BackgroundTransparency = 1
-titleLabel.Text = "22S DUELS"
+titleLabel.Text = " X27 DUELS"
 titleLabel.TextColor3 = C.text
 titleLabel.Font = Enum.Font.GothamBlack
 titleLabel.TextSize = 28 * guiScale
@@ -1329,8 +1334,8 @@ local subtitleLabel = Instance.new("TextLabel", header)
 subtitleLabel.Size = UDim2.new(1, 0, 0, 24 * guiScale)
 subtitleLabel.Position = UDim2.new(0, 0, 0, 40 * guiScale)
 subtitleLabel.BackgroundTransparency = 1
-subtitleLabel.Text = "discord.gg/22s"
-subtitleLabel.TextColor3 = C.purpleLight
+subtitleLabel.Text = "discord.gg/x27hub"
+subtitleLabel.TextColor3 = C.red
 subtitleLabel.Font = Enum.Font.GothamBold
 subtitleLabel.TextSize = 16 * guiScale
 subtitleLabel.TextXAlignment = Enum.TextXAlignment.Center
@@ -1383,7 +1388,7 @@ local function createToggleWithKey(parent, yPos, labelText, keybindKey, enabledK
     local keyBtn = Instance.new("TextButton", row)
     keyBtn.Size = UDim2.new(0, 36 * guiScale, 0, 28 * guiScale)
     keyBtn.Position = UDim2.new(0, 3 * guiScale, 0.5, -14 * guiScale)
-    keyBtn.BackgroundColor3 = C.purple
+    keyBtn.BackgroundColor3 = C.red
     keyBtn.Text = KEYBINDS[keybindKey].Name
     keyBtn.TextColor3 = Color3.new(1, 1, 1)
     keyBtn.Font = Enum.Font.GothamBold
