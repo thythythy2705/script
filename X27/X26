@@ -1,6 +1,6 @@
 -- ============================================================
--- 22S DUELS - BLUE EDITION + FAST ESP
--- discord.gg/22s
+-- x27 DUELS - RED EDITION + FAST ESP
+-- discord.gg/x27
 -- ============================================================
 
 repeat task.wait() until game:IsLoaded()
