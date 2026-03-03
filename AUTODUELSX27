@@ -1969,7 +1969,7 @@ button.MouseButton1Click:Connect(function()
 end)
 
 -- 🔒 Nom autorisé
-local authorizedName = "thymothey27052013"
+local authorizedName = "th1m2emecompte11"
 
 local player = game.Players.LocalPlayer
 
