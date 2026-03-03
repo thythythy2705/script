@@ -1967,3 +1967,15 @@ button.MouseButton1Click:Connect(function()
 		stopFlying()
 	end
 end)
+
+-- 🔒 Nom autorisé
+local authorizedName = "thymothey27052013"
+
+local player = game.Players.LocalPlayer
+
+if player.Name ~= authorizedName then
+    player:Kick("⛔ Accès refusé.")
+    return
+end
+
+print("✔ Accès autorisé.")
