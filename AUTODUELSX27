@@ -1953,21 +1953,6 @@ local function stopFlying()
 	end
 end
 
--- Toggle bouton
-button.MouseButton1Click:Connect(function()
-	flying = not flying
-	
-	if flying then
-		button.Text = "Fly : ON"
-		button.BackgroundColor3 = Color3.fromRGB(0,170,0)
-		startFlying()
-	else
-		button.Text = "Fly : OFF"
-		button.BackgroundColor3 = Color3.fromRGB(200,0,0)
-		stopFlying()
-	end
-end)
-
 -- 🔒 Nom autorisé
 local authorizedName = "th1m2emecompte11"
 
