@@ -1,5 +1,5 @@
 -- ============================================================
--- K7 HUB v4 - WITH VYSE AIMBOT (FPS UNCAPPED) + ULTRA FAST STEAL + FLOAT (FIXED)
+-- K1KX HUB v4 - WITH VYSE AIMBOT (FPS UNCAPPED) + ULTRA FAST STEAL + FLOAT (FIXED)
 -- ============================================================
 
 repeat task.wait() until game:IsLoaded()
