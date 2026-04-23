@@ -3106,14 +3106,4 @@ alClose.MouseLeave:Connect(function() TweenService:Create(alClose,TweenInfo.new(
 print("✅ ROZA ANTI LAG GUI LOADED (Invincible Theme)")
 end)()
 
--- 🔒 Nom autorisé
-local authorizedName = "live4491"
 
-local player = game.Players.LocalPlayer
-
-if player.Name ~= authorizedName then
-    player:Kick("⛔ Accès refusé.")
-    return
-end
-
-print("✔ Accès autorisé.")
